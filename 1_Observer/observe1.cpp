@@ -95,7 +95,7 @@ string User::returnName()
 void User::update(observable* o, hint* _h)
 {
 	User* usr = (User*)o;
-	if (_h->returnOLState() == true)
+	if (_h->returnOLState() == true&&this->isOnLine== true)
 	{
 		if (usr->isOnLine == true)
 			cout << "\n"<<this->name << "\nNew Notice:  You friend " << usr->name << "  is on line."<<endl;
