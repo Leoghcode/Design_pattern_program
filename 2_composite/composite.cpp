@@ -50,7 +50,6 @@ string File::getName()
 {
 	return name;
 }
-
 int File::getSize()
 {
 	return size;
