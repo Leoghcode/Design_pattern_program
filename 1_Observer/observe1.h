@@ -17,6 +17,7 @@ class observer {
 public:
 	observer();
 	virtual void update(observable* o, hint* _h) = 0;
+	bool deleteObservable(observable* o);
 	vector<observable*> obs;
 };
 class observable {
@@ -26,7 +27,7 @@ public:
 
 	observable();
 	observer* addObserver(observer* o);
-	//observer* removeObserver(observer* o);
+	bool deleteObserver(observer* o);
 	//virtual void notifyAllObservers1();
 	void notifyAllObservers(hint* _h);
 
@@ -41,9 +42,12 @@ public:
 	void update(observable* o, hint* _h);
 	string returnName();
 	void printFriendsList();
+	void printOLFriendNum();
+	void printFollowedUser();
 private:
 	bool isOnLine;
 	string name;
+	int olfriendnum;
 };
 
 #endif
